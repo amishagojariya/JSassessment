@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Booking Form</title>
-
-    <style>
+    <title>Document</title>
+<style>
         body {
             background-color: #bf8d4c;
             background-image: url('https://images.pexels.com/photos/6474521/pexels-photo-6474521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -47,6 +45,20 @@
            font-weight: bold;
            padding: 5px 10px;
         }
+
+        button[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color:white;
+      color: #bf8d4c;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 300ms;
+    }
+    button[type="submit"]:hover {
+      background-color:black;
+    }
        
       
     </style>
@@ -114,6 +126,13 @@
         const dynamicFields = document.createElement("div");
         dynamicFields.id = "dynamicFields";
         form.appendChild(dynamicFields);
+
+        
+        const submitButton = document.createElement("button");
+    submitButton.type = "submit";
+    submitButton.textContent = "Submit";
+    form.appendChild(submitButton);
+
 
         document.getElementById("bookingForm").appendChild(form);
 
